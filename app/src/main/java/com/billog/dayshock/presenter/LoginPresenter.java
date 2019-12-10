@@ -17,13 +17,15 @@ public class LoginPresenter implements ILoginPresenter {
     public void onLogin(String email, String password) {
         User user = new User(email, password);
         int loginCode = user.isValidData();
-        Log.e("BKMTEST", " =============== >> onLogin , loginCode : " + loginCode);
+
+        loginView.onLoginSuccess("444");
+
         if (loginCode == 0){
-            loginView.onLoginError("You must enter your email");
+            loginView.onLoginError("You must enter your email1111");
         } else if (loginCode == 1){
-            loginView.onLoginError("You must enter valid email");
+            loginView.onLoginError("You must enter valid email2222");
         } else if (loginCode == 2){
-            loginView.onLoginError("Password length must be greater than 6");
+            loginView.onLoginError("Password length must be greater than 63333");
         } else {
             loginView.onLoginSuccess("Login Success");
         }

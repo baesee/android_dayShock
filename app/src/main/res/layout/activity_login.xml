@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyMainActivity">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@mipmap/ic_launcher_round"
+            app:srcCompat="@drawable/templogo" />
+
+        <EditText
+            android:id="@+id/login_id"
+            android:hint="ID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"/>
+        <EditText
+            android:id="@+id/login_pwd"
+            android:hint="PASSWORD"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"/>
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="LOGIN"
+            />
+
+        <Button
+            android:id="@+id/btn_kakao"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="KAKAO LOGIN"
+            />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

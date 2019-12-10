@@ -25,8 +25,6 @@ public class LoginMain extends AppCompatActivity implements ILoginView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.e("BKMTEST", " =============== >> onCreate");
-
         edt_email = findViewById(R.id.edt_email);
         edt_password = findViewById(R.id.edt_password);
         btnLogin = findViewById(R.id.btn_login);
@@ -36,7 +34,8 @@ public class LoginMain extends AppCompatActivity implements ILoginView {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("BKMTEST", " =============== >> onClick");
+                System.out.println(" ============ login main");
+                Log.e("BBBBBBB"," LOGIN MAIN ");
                 loginPresenter.onLogin(edt_email.getText().toString(), edt_password.getText().toString());
             }
         });
