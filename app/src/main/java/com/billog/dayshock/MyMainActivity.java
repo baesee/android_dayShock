@@ -35,7 +35,6 @@ public class MyMainActivity extends AppCompatActivity implements ILoginView {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("BBBBBBB"," ============>>>>>>>> My My My My ");
                 loginPresenter.onLogin(edt_id.getText().toString(), edt_pwd.getText().toString());
             }
         });
