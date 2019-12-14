@@ -2,6 +2,7 @@ package com.billog.dayshock.active;
 
 import android.animation.ArgbEvaluator;
 import android.os.Bundle;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.widget.Adapter;
 
 import com.billog.dayshock.R;
 import com.billog.dayshock.model.Article;
+import com.billog.dayshock.util.BottomNavigationHelper;
 import com.billog.dayshock.view.IMainHomeView;
 
 import java.util.ArrayList;
@@ -26,6 +28,11 @@ public class MainHomeActivity extends AppCompatActivity implements IMainHomeView
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_home);
+
+        // 바텀 네비게이션뷰의 위치가 변하지 않도록 하기 위함.
+        BottomNavigationView bottomNavigationView = findViewById(R.id.main_nav);
+        BottomNavigationHelper bottomNavigationHelper = new BottomNavigationHelper();
+        bottomNavigationHelper.disableShiftMode(bottomNavigationView);
 
         articles = new ArrayList<>();
         articles.add(new Article(R.drawable.brochure, "Brochure", "Brochure is an informative paper document (often also used for advertising) that can be folded into a template"));

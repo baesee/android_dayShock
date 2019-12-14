@@ -14,10 +14,11 @@
         android:overScrollMode="never"
         android:clipToPadding="false"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_nav">
     </android.support.v4.view.ViewPager>
 
-    <Button
+    <!--<Button
         android:id="@+id/btnOrder"
         android:text="Order Now!"
         android:textColor="#fff"
@@ -29,5 +30,19 @@
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+        -->
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/main_nav"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        app:itemBackground="@color/nav_background_color"
+        app:itemIconTint="@color/nav_itme_color"
+        app:itemTextColor="@color/nav_itme_color"
+        app:menu="@menu/nav_items">
+
+    </android.support.design.widget.BottomNavigationView>
 
 </RelativeLayout>
