@@ -3,15 +3,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/nav_home"
         android:icon="@drawable/baseline_home_black_24dp"
         android:title="@string/nav_home" />
     <item
+        android:id="@+id/nav_challenge"
         android:icon="@drawable/baseline_emoji_events_black_24dp"
         android:title="@string/nav_challenge" />
     <item
+        android:id="@+id/nav_write"
         android:icon="@drawable/baseline_create_black_24dp"
         android:title="@string/nav_write" />
     <item
+        android:id="@+id/nav_setting"
         android:icon="@drawable/baseline_list_black_24dp"
         android:title="@string/nav_setting" />
 </menu>
